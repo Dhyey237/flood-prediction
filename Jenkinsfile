@@ -6,15 +6,10 @@ pipeline {
     }
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Dhyey237/flood-prediction'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m pip install --upgrade pip'
+                sh 'python3 -m pip install -r requirements.txt'
             }
         }
 
