@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/your-username/flood-risk-api.git'
+                git 'https://github.com/Dhyey237/flood-prediction'
             }
         }
 
